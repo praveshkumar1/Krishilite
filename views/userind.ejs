@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/userind.css" rel="stylesheet" type="text/css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+   <h1>THE BUYERS</h1>
+   <form action="/industrialist-reg" method="post">
+   <div class="search"> <h2>SEARCH:</h2><input id="search" type="search" name="search">
+  </div>
+  </form>
+  
+        <div class="container">
+            <% indusdetails.forEach(xyz=>{ %>
+            <div class="card">
+              <img src="https://images.pexels.com/photos/462235/pexels-photo-462235.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+              <!-- <img src="lays-photo-pbl.jpeg" alt=""> -->
+              <div class="card-body">
+                <div class="card-text">
+                   <h2>NAME: <%= xyz.name %></h2> 
+                   <div class="paras"> <p>Crop:<%= xyz.crop %></p>
+                    <p>Price:₹<%= xyz.price %>/kg</p>
+                    <p>Location:<%= xyz.location %></p>
+                    <p><ion-icon id="phone" name="call-outline"></ion-icon>Contact: <span><%= xyz.number %></span> </p>
+                  </div>
+                  
+                
+                   <!-- <a href="/profile"></a>
+                <button> More...</button> -->
+              </div>
+          </div>
+          </div>
+          <% }) %>
+          
+              
+
+          </div>
+ 
+  <script src="/javascript/userind.js"></script>
+</body>
+</html>

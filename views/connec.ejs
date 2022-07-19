@@ -1,0 +1,47 @@
+
+    
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <!-- font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="/css/connectiondetails.css" rel="stylesheet" type="text/css">
+     
+    
+    </head>
+    <body>
+     
+
+      <div class="wrapper">
+        <!-- left-start -->
+        <h1 class="heading">People who recently viewed your profile:</h1>
+        <section class="left">
+          <div class="left-container">
+            <header class="left-header">
+              <figure>
+                <img
+                  src="connecnewimg.webp"
+                  alt="product-photo"
+                  id="connecimg"
+                />
+              </figure>
+              
+            </header>
+            <section class="main">
+              <span>Your Connections:</span>
+              <div class="names"> <% connecdetails.forEach(abc=>{ %>
+                <h2><%= abc.Connectionsname%></h2>
+               
+               <% }) %></div>
+            </section>
+          </div>
+        </section>
+       
+      </div>
+    </body>
+  </html>

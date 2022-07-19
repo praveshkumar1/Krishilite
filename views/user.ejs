@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style2.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    <!-- <div class="title">OUR USERS </div>
+    <div class="cards-holder">
+       <% farmername.forEach(xyz=>{ %>
+            <div class="card">
+                <div class="title">FARMERS</div>
+                <div class="name">NAME:<%= xyz.name %></div>
+                <div class="location">Location:<%= xyz.location %></div>
+            </div>
+        <% }) %>
+        
+    </div> -->
+    <div class="main">
+        <h1>OUR USERS</h1>
+        <form action="/users" method="post">
+          <div class="crop">
+          <label for="name">
+            CROP:
+          </label>
+          <input type="text" name="crop" id="crop"></div>
+          <div class="location">
+          <label for="location">
+            LOCATION :
+          </label>
+          <input type="text" name="location" id="location"></div>
+          <button type="submit" id="submit">Search</button>
+        </form>
+    
+
+        <!-- <div class="card-holder">
+        <% farmername.forEach(xyz=>{ %>
+            <ul class="cards">
+                <li class="cards_item">
+                  <div class="card">
+                    <div class="card_image"><img src="mainperson.jfif"></div>
+                    <div class="card_content">
+                      <h2 class="card_title">NAME:<%= xyz.name %></h2>
+                      <p class="card_text">LOCATION: <%= xyz.location%></p>
+                      <button class="btn card_btn">Read More</button>
+                    </div>
+                  </div>
+                </li>
+       <% }) %>      -->
+
+
+       <section class="cards">
+        <!--   card 1 -->
+        <% farmername.forEach(xyz=>{ %>
+          <article class="card">
+          
+            <div class="viewprofile"><a href="/profile_<%= xyz._id%>">view profile</a></div>
+           
+            <img src="connecnewimg.webp" alt="" id="connecimg">
+            <form action="/connec" method="post">
+              
+              <input type='checkbox' onchange="this.form.submit()" name="checkbox_connec" id="checkbox_connec" value= "<%= xyz._id%>" >
+            </form>
+            <picture class="thumbnail">
+                 <img class="category__01" src="mainperson.jfif" alt="" >
+            </picture>
+           
+          
+            <div class="card-content">
+              <p class="category category__01">NAME:  <%= xyz.name %></p>
+              <h2>CROP:  <%= xyz.crop %></h2>
+              <div class="farmer_sub_info">
+                <div class="location">LOCATION:  <%= xyz.location%></div>
+                 <div class="quantity">QUANTITY: <%= xyz.quantity%></div> 
+                 
+              </div>
+           </div><!-- .card-content -->
+            <footer>
+              <div class="post-meta">
+                <span class="timestamp"><i class="fa fa-clock-o"></i>CONTACT :</span>
+                <span class="comments"><i class="fa fa-comments"></i><a href="#"><%= xyz.number%></a></span>
+                
+                <span class="timestamp"><i class="fa fa-clock-o"></i><ion-icon name="thumbs-up" id="likeicon"></ion-icon>:</span>
+                
+              
+                    <span class="comments"><i class="fa fa-comments"></i><a href="#"><%= xyz.Likes%></a></span>
+                    <form action="/likes" method="post">
+              
+                      <input type='checkbox' onchange="this.form.submit()" name="checkbox" id="checkbox" value= "<%= xyz._id%>" >
+                    </form>
+                </div>
+               
+
+            </footer>
+          </article>
+          
+          <% }) %>     
+        </section>
+        <script>
+          const linkicon=document.getElementById('checkbox_connec');
+          linkicon.addEventListener('click',()=>{
+            alert('connected. Now the farmer can see your request')
+            console.log('hi');
+          })
+        </script>
+    </div>
+         
+        
+        
+        
+         
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>

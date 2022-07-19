@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/profile.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="exitbutton">
+        <a href="/index1">HOME</a>
+      </div>
+    
+    
+    
+      <% details.forEach(abc=>{ %>
+        <div class="cajaDeperfiles">
+    
+          <div class="contenedor">
+            <div class="contenedorSuperior">
+              <div class="imgBox">
+                <img src="mainperson.jfif" alt="emilia">
+              </div>
+            </div>
+      
+            <div class="cajaInfo">
+              <div class="info">
+                <div class="tapadera"></div>
+                <h2>
+    
+    
+            <%= abc.name %>      <br />
+                  <span class="Texdelgado"><%= abc.location %></span>
+                </h2>
+                <br>
+                <h3><span class="Texdelgado" id="crop"><%= abc.crop %></span><br> Crop </h3>
+                <div class="Data">
+              
+                  <h3><span class="Texdelgado"> <%= abc.quantity %></span><br> Quantity </h3>
+                  <h3><span class="Texdelgado"> <%= abc.price %></span><br> Price </h3>
+                  <h3><span class="Texdelgado"> <%= abc.Likes %></span><br> Likes </h3>
+                  <h3><span class="Texdelgado"> <%= abc.Connections %></span><br>Connections</h3>
+                 
+                </div>
+    
+             
+            
+              </div>
+            </div>
+          </div>
+          
+    
+         
+        </div>
+    
+       <!-- <button id="connection_button"> <a href="/connections">View  <br> connections</a></button> -->
+        <!-- <button class="button">
+          <a href="/extrainfo"
+            >Edit profile</a
+          >
+        </button> -->
+    
+      <% }) %>
+      
+</body>
+</html>

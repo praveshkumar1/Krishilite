@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link href="/css/extrainfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+   
+   
+   <div class="contain">
+
+    <div class="wrapper">
+  
+      <div class="form">
+        <h4> EDIT PROFILE</h4>
+        
+        <h2 class="form-headline"><%= profilename %></h2>
+        <h4><%= profileemail %></h4>
+        <form id="submit-form" action="/extrainfo" method="post">
+        
+          
+         
+          <p>
+            <input id="email" class="form-input" type="text" placeholder="Crop*" name="crop" required>
+            <small class="name-error"></small>
+          </p>
+         
+          <p class="full-width">
+            <input id="company-name" class="form-input" type="text" placeholder="Location" name="location" required>
+            <small></small>
+          </p>
+          <p class="full-width">
+            <input id="company-name" class="form-input" type="text" placeholder="quantity" name="quantity" required>
+            <small></small>
+          </p>
+          <p class="full-width">
+            <input id="company-name" class="form-input" type="text" placeholder="price" name="price" required>
+            <small></small>
+          </p>
+        
+          <p class="full-width">
+            <input type="submit" class="submit-btn" value="Submit">
+           
+          </p>
+        </form>
+      </div>
+  
+      
+    </div>
+  </div>
+</body>
+</html>
+
